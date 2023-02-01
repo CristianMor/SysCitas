@@ -1,4 +1,4 @@
 # JacvaFX-specific files
 bin/
-
+*.class 
 run.sh
