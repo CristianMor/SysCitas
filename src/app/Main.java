@@ -1,8 +1,14 @@
 package app;
 
+import app.models.Appointment;
+import app.views.AppointmentViewController;
+
 import java.io.File;
 import java.io.IOException;
+
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -13,6 +19,19 @@ public class Main extends Application {
 
   private Stage primaryStage;
   private BorderPane rootView;
+  // Los datos como lista observable de Personas
+  private ObservableList<Appointment> citaData = FXCollections.observableArrayList();
+  
+  public Main(){
+    citaData.add(new Appointment("Chanchito"));
+  }
+
+  /* Devuelve los datos como una lista observable de Personas.
+   * @return 
+   */
+  public ObservableList<Appointment> getCitaData(){
+    return citaData;
+  }
 
   @Override 
   public void start(Stage primaryStage){
@@ -51,6 +70,9 @@ public class Main extends Application {
       // Coloque la vista general de citas en el centro de la disposición de raíces.
       rootView.setCenter(appointmentView);
 
+      // Dar acceso al controlador a la aplicación principal
+      AppointmentViewController controller = loader.getController();
+      controller.setMain(this);
     } catch (IOException ioe) {
       //TODO: handle exception
       ioe.printStackTrace();
