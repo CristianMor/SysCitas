@@ -52,8 +52,8 @@
                   <HBox alignment="CENTER" layoutX="149.0" layoutY="221.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
                      <children>
                         <Button mnemonicParsing="false" text="Nuevo" />
-                        <Button mnemonicParsing="false" text="Editar" />
-                        <Button mnemonicParsing="false" text="Eliminar" />
+                        <Button mnemonicParsing="false" onAction="#showAppointmentEditDialog" text="Editar" />
+                        <Button mnemonicParsing="false" onAction="#handleDeleteAppointment" text="Eliminar" />
                      </children>
                   </HBox>
                </children>
