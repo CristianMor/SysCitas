@@ -1,9 +1,4 @@
-SE EDITO LA PRIMERA LINEA HABER QUE PASAA SI SE EDITA EL MISMO ARCHIVO.
 package app;
-
-import app.models.Appointment;
-import app.views.AppointmentViewController;
-import app.views.AppointmentEditDialogController;
 
 import java.io.File;
 import java.io.IOException;
@@ -128,7 +123,6 @@ public class Main extends Application {
     return primaryStage;
   }
 
-  public static void main(String[] args) { launch(args); }
-  
-  aqui tambien se escribio algo.
+  public static void main(String[] args) { launch(args); }  
 }
+
