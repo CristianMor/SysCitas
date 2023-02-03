@@ -1,3 +1,4 @@
+SE EDITO LA PRIMERA LINEA HABER QUE PASAA SI SE EDITA EL MISMO ARCHIVO.
 package app;
 
 import app.models.Appointment;
@@ -129,4 +130,5 @@ public class Main extends Application {
 
   public static void main(String[] args) { launch(args); }
   
+  aqui tambien se escribio algo.
 }
