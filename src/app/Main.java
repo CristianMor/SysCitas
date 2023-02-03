@@ -6,6 +6,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+wjekrjwekrj:q
+
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
