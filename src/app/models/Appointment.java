@@ -15,6 +15,7 @@ public class Appointment {
   private final ObjectProperty<LocalDate> fecha;
 
 
+  SE EDITO EL ARCHIVO:
   /* Contructor por defecto */
   public Appointment() {
     this(null);
