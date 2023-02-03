@@ -1,5 +1,7 @@
+
 package app;
 
+que onda se puso otra lineota aqui
 import java.io.File;
 import java.io.IOException;
 import javafx.application.Application;
@@ -68,3 +70,5 @@ public class Main extends Application {
   public static void main(String[] args) { launch(args); }
   
 }
+
+console lod aqui abajo tambine se hicieorn cambios:
