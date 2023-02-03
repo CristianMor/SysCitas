@@ -40,6 +40,7 @@ public class Main extends Application {
     }
   }
 
+  console.log("Se agrego un poco como si fuera javascript");
   // Muestra la vista general de las citas dentro del root layout
   public void showAppointmentView(){
     try {
