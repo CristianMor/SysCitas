@@ -1,7 +1,5 @@
-
+console.log("Se dito todo");
 package app;
-
-que onda se puso otra lineota aqui
 import java.io.File;
 import java.io.IOException;
 import javafx.application.Application;
@@ -41,6 +39,7 @@ public class Main extends Application {
       ioe.printStackTrace();
     }
   }
+  hola bri
 
   console.log("Se agrego un poco como si fuera javascript");
   // Muestra la vista general de las citas dentro del root layout
@@ -69,6 +68,7 @@ public class Main extends Application {
 
   public static void main(String[] args) { launch(args); }
   
+  public vois
 }
 
 console lod aqui abajo tambine se hicieorn cambios:
