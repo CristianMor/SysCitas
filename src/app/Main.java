@@ -1,3 +1,4 @@
+SE ESCRIBIO EN LA PRIMERA LINEA PERROS
 package app;
 
 import java.io.File;
@@ -33,6 +34,9 @@ public class Main extends Application {
 
   @Override 
   public void start(Stage primaryStage){
+
+
+    console.log("Maz cosas cambiaron ");
     this.primaryStage = primaryStage;
     this.primaryStage.setTitle("SysCitas");
 
@@ -124,5 +128,6 @@ public class Main extends Application {
   }
 
   public static void main(String[] args) { launch(args); }  
+  console.log('khjasdhf');
 }
 
