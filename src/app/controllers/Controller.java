@@ -1,3 +1,9 @@
+package app.controllers;
+ 
+import app.Main;
+import app.models.AppointmentModel;
+import app.models.classes.Appointment;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,19 +28,25 @@ public class Controller {
   private AppointmentModel model = new AppointmentModel();
 
   public void initialize(){
-    usernameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
-    appointmentTimeColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
 
+    usernameColumn.setCellValueFactory(cellData -> cellData.getValue().usernameProperty());
+    appointmentTimeColumn.setCellValueFactory(cellData -> cellData.getValue().appointmentTimeProperty());
+
+    // Limpiar detalles de la cita.
+    showAppointment(null);
+
+    // Escuchar los cambios de selección y mostrar los detalles de la persona cuando se cambian.
+    table.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> showAppointment(newValue));
     data = model.getData();
     table.setItems(data);
   }
 
   @FXML
-  private void addApointment(){
+  private void addAppointment(){
     String username =  usernameInput.getText();
     String appointmentTime = appointmentTimeInput.getText();
 
-    model.addPerson(username, appointmentTime);
+    model.addAppointment(username, appointmentTime);
     table.refresh();
     usernameInput.clear();
     appointmentTimeInput.clear();
@@ -47,18 +59,21 @@ public class Controller {
       return;
     }
 
+    int index = data.indexOf(appointment);
     String username = usernameInput.getText();
     String appointmentTime = appointmentTimeInput.getText();
 
-    model.updateAppointment(username, appointmentTime);
-    table.refresh;
+    model.updateAppointment(index, username, appointmentTime);
+    table.refresh();
     usernameInput.clear();
     appointmentTimeInput.clear();
   }
 
   @FXML
   private void deleteAppointment(){
+
     Appointment appointment = table.getSelectionModel().getSelectedItem();
+
     if(appointment == null){
       return;
     }
@@ -68,4 +83,16 @@ public class Controller {
     usernameInput.clear();
     appointmentTimeInput.clear();
   }
+
+  private void showAppointment(Appointment appointment){
+    if(appointment != null ){
+      // Rellena los inputs con información del objeto cita.
+      usernameInput.setText(appointment.getUsername());
+      appointmentTimeInput.setText(appointment.getAppointmentTime());
+    }else{
+      usernameInput.setText("");
+      appointmentTimeInput.setText("");
+    }
+  }
+
 }

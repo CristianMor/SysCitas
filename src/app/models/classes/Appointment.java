@@ -1,3 +1,7 @@
+package app.models.classes;
+
+import javafx.beans.property.SimpleStringProperty;
+
 public class Appointment {
 
   private SimpleStringProperty username;
@@ -28,7 +32,7 @@ public class Appointment {
     return this.appointmentTime.get();
   }
 
-  public void SimpleStringProperty appointmentTimeProperty(){
+  public SimpleStringProperty appointmentTimeProperty(){
     return appointmentTime;
   }
 }
