@@ -1,8 +1,10 @@
-SE ESCRIBIO EN LA PRIMERA LINEA PERROS
 package app;
 
 import java.io.File;
 import java.io.IOException;
+import app.models.Appointment;
+import app.views.AppointmentViewController;
+import app.views.AppointmentEditDialogController;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -36,7 +38,6 @@ public class Main extends Application {
   public void start(Stage primaryStage){
 
 
-    console.log("Maz cosas cambiaron ");
     this.primaryStage = primaryStage;
     this.primaryStage.setTitle("SysCitas");
 
@@ -61,7 +62,6 @@ public class Main extends Application {
     }
   }
 
-  console.log("Se agrego un poco como si fuera javascript");
   // Muestra la vista general de las citas dentro del root layout
   public void showAppointmentView(){
     try {
@@ -90,7 +90,7 @@ public class Main extends Application {
    * @param persona el objeto persona a editar
    * @return true si el usuario hace clic en OK, false en caso contrario.
    */
-    public boolean showAppointmentEditDialog(Appointment appointment) {
+    private boolean showAppointmentEditDialog(Appointment appointment) {
       try {
         // Cargar el archivo fxml y crear un nuevo escenario para el diálogo emergente.
         FXMLLoader loader = new FXMLLoader();
@@ -128,6 +128,4 @@ public class Main extends Application {
   }
 
   public static void main(String[] args) { launch(args); }  
-  console.log('khjasdhf');
 }
-
