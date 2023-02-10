@@ -1,6 +1,12 @@
 package app;
 
-import java.io.File;
+public class Main {
+  public static void main(String[] args) {
+    System.out.println(" ** Inicio programa ** ");
+  }
+}
+
+/*import java.io.File;
 import java.io.IOException;
 import app.models.Appointment;
 import app.views.AppointmentViewController;
@@ -29,7 +35,7 @@ public class Main extends Application {
 
   /* Devuelve los datos como una lista observable de Citas.
    * @return 
-   */
+   *
   public ObservableList<Appointment> getCitaData(){
     return citaData;
   }
@@ -89,7 +95,7 @@ public class Main extends Application {
    * 
    * @param persona el objeto persona a editar
    * @return true si el usuario hace clic en OK, false en caso contrario.
-   */
+   *
     private boolean showAppointmentEditDialog(Appointment appointment) {
       try {
         // Cargar el archivo fxml y crear un nuevo escenario para el diálogo emergente.
@@ -122,10 +128,10 @@ public class Main extends Application {
 
   /* Devuelve el escenario principal.
    * @return
-   */
+   *
   public Stage getPrimaryStage(){
     return primaryStage;
   }
 
-  public static void main(String[] args) { launch(args); }  
+  public static void main(String[] args) { launch(args); }*/
 }
