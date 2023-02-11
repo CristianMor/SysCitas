@@ -6,10 +6,12 @@ public class Appointment {
 
   private SimpleStringProperty username;
   private SimpleStringProperty appointmentTime;
+  private String idcita;
 
-  public Appointment(String username, String appointmentTime){
+  public Appointment(String username, String appointmentTime, String idcita){
     this.username = new SimpleStringProperty(username);
     this.appointmentTime = new SimpleStringProperty(appointmentTime);
+    this.idcita = idcita;
   }
 
   public void setUsername(String username){
@@ -34,5 +36,13 @@ public class Appointment {
 
   public SimpleStringProperty appointmentTimeProperty(){
     return appointmentTime;
+  }
+
+  public void setIdCita(String idcita){
+    this.idcita = idcita;
+  }
+
+  public String getIdCita(){
+    return this.idcita;
   }
 }

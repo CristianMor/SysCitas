@@ -23,10 +23,6 @@ public class Main extends Application{
   private AppointmentModel model = new AppointmentModel();
   private Stage primaryStage;
 
-  public Main(){
-    ObservableList<Appointment> data = model.getData();
-    data.add(new Appointment("Valeria Aileen", "10:00 PM"));
-  }
   @Override
   public void start(Stage primaryStage) throws Exception{
     this.primaryStage = primaryStage;
@@ -45,6 +41,7 @@ public class Main extends Application{
       // Show the scene containing the root layout.
       Scene scene = new Scene(root);
       primaryStage.setScene(scene);
+      primaryStage.setResizable(false);
       primaryStage.show();
 
     } catch (IOException ioe){

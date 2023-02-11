@@ -1,0 +1,36 @@
+.root {
+  -fx-background-color: #2f4f4f;
+  -fx-padding: 20px;
+}
+
+.vbox {
+  -fx-spacing: 20px;
+  -fx-alignment: center;
+}
+
+.title {
+  -fx-font-size: 32px;
+  -fx-text-fill: white;
+}
+
+.label {
+  -fx-text-fill: white;
+}
+
+.textfield {
+  -fx-pref-width: 300px;
+  -fx-background-radius: 5px;
+}
+
+.button {
+  -fx-pref-width: 200px;
+  -fx-background-radius: 5px;
+  -fx-background-color: #6495ed;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+
+.button:hover {
+  -fx-background-color: #3e8e41;
+  -fx-text-fill: white;
+}
